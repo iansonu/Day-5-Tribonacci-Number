@@ -1,0 +1,22 @@
+class Solution {
+    public int tribonacci(int n) {
+       if(n == 0) {
+        return 0;
+       }else if(n == 1 || n ==2){
+        return 1;
+       }else{
+       int firstVal = 0;
+       int secondVal = 1;
+       int thirdVal = 1;
+
+       for(int i = 1; i<= n; i++){
+        int fourthVal = firstVal + secondVal + thirdVal;
+        
+         firstVal = secondVal;
+         secondVal = thirdVal;
+         thirdVal = fourthVal;
+       }
+       return firstVal;
+    }
+    }
+}
